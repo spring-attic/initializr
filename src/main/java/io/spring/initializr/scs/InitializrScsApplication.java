@@ -20,7 +20,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import io.spring.initializr.generator.ProjectGenerator;
-import io.spring.initializr.generator.ScsProjectGenerator;
+import io.spring.initializr.scs.generator.ScsProjectGenerator;
 
 /**
  *
