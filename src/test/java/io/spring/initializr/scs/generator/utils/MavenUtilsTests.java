@@ -24,6 +24,11 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.util.StreamUtils;
 
+/**
+*
+* @author Gunnar Hillert
+*
+*/
 public class MavenUtilsTests {
 
 	@Test

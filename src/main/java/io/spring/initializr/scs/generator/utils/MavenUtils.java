@@ -29,7 +29,7 @@ import org.codehaus.plexus.util.xml.Xpp3Dom;
 import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
 
 /**
- * @author hillert
+ * @author Gunnar Hillert
  *
  */
 public class MavenUtils {
@@ -43,6 +43,8 @@ public class MavenUtils {
 		} catch (IOException | XmlPullParserException e) {
 			throw new IllegalStateException(e);
 		}
+
+		pomModel.addProperty("docker.image", "${project.artifactId}-app");
 
 		final Plugin dockerPlugin = new Plugin();
 		dockerPlugin.setGroupId("io.fabric8");
