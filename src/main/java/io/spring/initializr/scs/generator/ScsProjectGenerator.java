@@ -38,26 +38,30 @@ public class ScsProjectGenerator extends ProjectGenerator {
 
 		final File rootDir = super.doGenerateProjectStructure(request);
 
-		final File dir = new File(rootDir, request.getBaseDir());
+		boolean mavenBuild = "maven".equals(request.getBuild());
 
-		final File dockerDir = new File(dir, "src/main/docker");
-		dockerDir.mkdirs();
-		write(new File(dockerDir, "assembly.xml"), "assembly.xml", initializeModel(request));
+		if (mavenBuild) {
+			final File dir = new File(rootDir, request.getBaseDir());
 
-		final File inputFile = new File(dir, "pom.xml");
-		final File tempOutputFile = new File(dir, "pom_tmp.xml");
+			final File dockerDir = new File(dir, "src/main/docker");
+			dockerDir.mkdirs();
+			write(new File(dockerDir, "assembly.xml"), "assembly.xml", initializeModel(request));
 
-		try {
-			final InputStream is = new FileInputStream(inputFile);
-			final OutputStream os = new FileOutputStream(tempOutputFile);
-			MavenUtils.addDockerPlugin(is, os);
-		} catch (FileNotFoundException e) {
-			throw new IllegalStateException(e);
+			final File inputFile = new File(dir, "pom.xml");
+			final File tempOutputFile = new File(dir, "pom_tmp.xml");
+
+			try {
+				final InputStream is = new FileInputStream(inputFile);
+				final OutputStream os = new FileOutputStream(tempOutputFile);
+				MavenUtils.addDockerPlugin(is, os);
+			} catch (FileNotFoundException e) {
+				throw new IllegalStateException(e);
+			}
+
+			inputFile.delete();
+			tempOutputFile.renameTo(inputFile);
+			tempOutputFile.delete();
 		}
-
-		inputFile.delete();
-		tempOutputFile.renameTo(inputFile);
-		tempOutputFile.delete();
 
 		return rootDir;
 
