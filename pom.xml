@@ -22,16 +22,21 @@
 	</parent>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>io.spring.initializr</groupId>
 			<artifactId>initializr-generator</artifactId>
 			<version>0.1.0.RELEASE</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<groupId>io.spring.initializr</groupId>
+			<artifactId>initializr-web</artifactId>
+			<version>0.1.0.RELEASE</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-groovy-templates</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.maven</groupId>
 			<artifactId>maven-model</artifactId>
