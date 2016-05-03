@@ -18,7 +18,7 @@ initializr:
       spring-cloud-stream-bom:
         groupId: org.springframework.cloud.stream.app
         artifactId: spring-cloud-stream-app-dependencies
-        version: 1.0.0.BUILD-SNAPSHOT
+        version: 1.0.0.M1
         repositories: spring-snapshots,spring-milestones
       vaadin-bom:
         groupId: com.vaadin
@@ -47,6 +47,22 @@ initializr:
   dependencies:
     - name: SCS Starter Module
       content:
+        - name: Cassandra Sink
+          id: spring-cloud-starter-stream-sink-cassandra
+          description: Cassandra Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-cassandra
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Loggregator Source
+          id: spring-cloud-starter-stream-source-loggregator
+          description: Loggregator Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-loggregator
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
         - name: File Source
           id: spring-cloud-starter-stream-source-file
           description: File Source Starter
@@ -63,11 +79,99 @@ initializr:
           scope: compile
           starter: true
           bom: spring-cloud-stream-bom
+        - name: FTP Source
+          id: spring-cloud-starter-stream-source-ftp
+          description: FTP Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-ftp
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: FTP Sink
+          id: spring-cloud-starter-stream-sink-ftp
+          description: FTP Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-ftp
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Gemfire Source
+          id: spring-cloud-starter-stream-source-gemfire
+          description: Gemfire Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-gemfire
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Gemfire Sink
+          id: spring-cloud-starter-stream-sink-gemfire
+          description: Gemfire Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-gemfire
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Gemfire CQ Source
+          id: spring-cloud-starter-stream-source-gemfire-cq
+          description: Gemfire CQ Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-gemfire-cq
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: GPFDIST Sink
+          id: spring-cloud-starter-stream-sink-gpfdist
+          description: GPFDIST Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-gpfdist
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: HDFS Sink
+          id: spring-cloud-starter-stream-sink-hdfs
+          description: HDFS Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-hdfs
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: HDFS Dataset Sink
+          id: spring-cloud-starter-stream-sink-hdfs-dataset
+          description: HDFS Dataset Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-hdfs-dataset
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
         - name: HTTP Source
           id: spring-cloud-starter-stream-source-http
           description: HTTP Source Starter
           groupId: org.springframework.cloud.stream.app
           artifactId: spring-cloud-starter-stream-source-http
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: JDBC Source
+          id: spring-cloud-starter-stream-source-jdbc
+          description: JDBC Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-jdbc
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: JDBC Sink
+          id: spring-cloud-starter-stream-sink-jdbc
+          description: JDBC Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-jdbc
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: JMS Source
+          id: spring-cloud-starter-stream-source-jms
+          description: JMS Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-jms
           scope: compile
           starter: true
           bom: spring-cloud-stream-bom
@@ -79,11 +183,227 @@ initializr:
           scope: compile
           starter: true
           bom: spring-cloud-stream-bom
+        - name: Aggregate Counter Sink
+          id: spring-cloud-starter-stream-sink-aggregate-counter
+          description: Aggregate Counter Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-aggregate-counter
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Counter Sink
+          id: spring-cloud-starter-stream-sink-counter
+          description: Counter Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-counter
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Field Value Counter Sink
+          id: spring-cloud-starter-stream-sink-field-value-counter
+          description: Field Value Counter Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-field-value-counter
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Bridge Processor
+          id: spring-cloud-starter-stream-processor-bridge
+          description: Bridge Processor Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-bridge
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Filter Processor
+          id: spring-cloud-starter-stream-processor-filter
+          description: Filter Processor Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-filter
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Groovy Filter Processor
+          id: spring-cloud-starter-stream-processor-groovy-filter
+          description: Groovy Filter Processor Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-groovy-filter
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Groovy Transform Processor
+          id: spring-cloud-starter-stream-processor-groovy-transform
+          description: Groovy Transform Processor Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-groovy-transform
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: HttpClient Processor
+          id: spring-cloud-starter-stream-processor-httpclient
+          description: HttpClient Processor Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-httpclient
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: PMML Processor
+          id: spring-cloud-starter-stream-processor-pmml
+          description: PMML Processor Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-pmml
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Scriptable Transform Processor
+          id: spring-cloud-starter-stream-processor-scriptable-transform
+          description: Scriptable Transform Processor Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-scriptable-transform
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Splitter Processor
+          id: spring-cloud-starter-stream-processor-splitter
+          description: Splitter Processor Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-splitter
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Transform Processor
+          id: spring-cloud-starter-stream-processor-transform
+          description: Splitter Processor Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-transform
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Rabbit Source
+          id: spring-cloud-starter-stream-source-rabbit
+          description: Rabbit Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-rabbit
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Rabbit Sink
+          id: spring-cloud-starter-stream-sink-rabbit
+          description: Rabbit Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-rabbit
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Redis Sink
+          id: spring-cloud-starter-stream-sink-redis
+          description: Redis Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-redis
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Router Sink
+          id: spring-cloud-starter-stream-sink-router
+          description: Router Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-router
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: SFTP Source
+          id: spring-cloud-starter-stream-source-sftp
+          description: SFTP Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-sftp
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: SFTP Sink
+          id: spring-cloud-starter-stream-sink-sftp
+          description: SFTP Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-sftp
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Syslog Source
+          id: spring-cloud-starter-stream-source-syslog
+          description: Syslog Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-syslog
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: TCP Source
+          id: spring-cloud-starter-stream-source-tcp
+          description: TCP Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-tcp
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: TCP Sink
+          id: spring-cloud-starter-stream-sink-tcp
+          description: TCP Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-tcp
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Integration Test Processor
+          id: spring-cloud-starter-stream-processor-integration-test
+          description: Integration Test Processor Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-integration-test
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Throughput Sink
+          id: spring-cloud-starter-stream-sink-throughput
+          description: Throughput Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-throughput
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Load Generator Source
+          id: spring-cloud-starter-stream-source-load-generator
+          description: Load Generator Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-load-generator
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
         - name: Time Source
           id: spring-cloud-starter-stream-source-time
           description: Time Source Starter
           groupId: org.springframework.cloud.stream.app
           artifactId: spring-cloud-starter-stream-source-time
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Trigger Source
+          id: spring-cloud-starter-stream-source-trigger
+          description: Trigger Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-trigger
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Twitter Stream Source
+          id: spring-cloud-starter-stream-source-twitterstream
+          description: Twitter Stream Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-twitterstream
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Websocket Sink
+          id: spring-cloud-starter-stream-sink-websocket
+          description: Websocket Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-websocket
           scope: compile
           starter: true
           bom: spring-cloud-stream-bom
@@ -101,13 +421,6 @@ initializr:
           description: Rabbit binder implementation
           groupId: org.springframework.cloud
           artifactId: spring-cloud-stream-binder-rabbit
-          scope: compile
-          starter: false
-        - name: Redis binder
-          id: spring-cloud-stream-binder-redis
-          description: Redis binder implementation
-          groupId: org.springframework.cloud
-          artifactId: spring-cloud-stream-binder-redis
           scope: compile
           starter: false
   types:

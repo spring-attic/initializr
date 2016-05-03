@@ -3,3 +3,6 @@
 .settings/
 rebel.xml
 .project
+*.iml
+*.ipr
+*.iws

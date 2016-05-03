@@ -23,10 +23,15 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>io.spring.initalizr</groupId>
-			<artifactId>initializr</artifactId>
-			<version>1.0.0.BUILD-SNAPSHOT</version>
+			<groupId>io.spring.initializr</groupId>
+			<artifactId>initializr-generator</artifactId>
+			<version>0.1.0.RELEASE</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.apache.maven</groupId>
 			<artifactId>maven-model</artifactId>
@@ -86,6 +91,14 @@
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
+		</repository>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>spring-releases</id>
+			<name>Spring Releases</name>
+			<url>http://repo.spring.io/release</url>
 		</repository>
 	</repositories>
 </project>
