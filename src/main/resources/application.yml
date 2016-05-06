@@ -409,16 +409,16 @@ initializr:
           bom: spring-cloud-stream-bom
     - name: Binder Type
       content:
-        - name: Kafka binder
-          id: spring-cloud-stream-binder-kafka
-          description: Kafka binder implementation
+        - name: Kafka binder starter
+          id: spring-cloud-starter-stream-kafka
+          description: Kafka binder starter implementation
           groupId: org.springframework.cloud
           artifactId: spring-cloud-stream-binder-kafka
           scope: compile
           starter: false
-        - name: Rabbit binder
-          id: spring-cloud-stream-binder-rabbit
-          description: Rabbit binder implementation
+        - name: Rabbit binder starter
+          id: spring-cloud-starter-stream-rabbit
+          description: Rabbit binder starter implementation
           groupId: org.springframework.cloud
           artifactId: spring-cloud-stream-binder-rabbit
           scope: compile
