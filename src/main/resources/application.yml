@@ -20,6 +20,11 @@ initializr:
         artifactId: spring-cloud-stream-app-dependencies
         version: 1.0.0.M1
         repositories: spring-snapshots,spring-milestones
+      spring-cloud-task-bom:
+        groupId: org.springframework.cloud.task.app
+        artifactId: spring-cloud-task-app-dependencies
+        version: 1.0.0.M1
+        repositories: spring-snapshots,spring-milestones
       vaadin-bom:
         groupId: com.vaadin
         artifactId: vaadin-bom
@@ -45,7 +50,7 @@ initializr:
     kotlin:
       version: 1.0.0
   dependencies:
-    - name: SCS Starter Module
+    - name: Spring Cloud Stream Starter Applications
       content:
         - name: Cassandra Sink
           id: spring-cloud-starter-stream-sink-cassandra
@@ -407,7 +412,7 @@ initializr:
           scope: compile
           starter: true
           bom: spring-cloud-stream-bom
-    - name: Binder Type
+    - name: Spring Cloud Stream Binder Type
       content:
         - name: Kafka binder starter
           id: spring-cloud-starter-stream-kafka
@@ -423,6 +428,48 @@ initializr:
           artifactId: spring-cloud-stream-binder-rabbit
           scope: compile
           starter: false
+    - name: Spring Cloud Task Starter Applications
+      content:
+        - name: Spark Client
+          id: spring-cloud-starter-task-spark-client
+          description: Spark Client Starter
+          groupId: org.springframework.cloud.task.app
+          artifactId: spring-cloud-starter-task-spark-client
+          scope: compile
+          starter: true
+          bom: spring-cloud-task-bom
+        - name: Spark Cluster
+          id: spring-cloud-starter-task-spark-cluster
+          description: Spark Cluster Starter
+          groupId: org.springframework.cloud.task.app
+          artifactId: spring-cloud-starter-task-spark-cluster
+          scope: compile
+          starter: true
+          bom: spring-cloud-task-bom
+        - name: Spark Yarn
+          id: spring-cloud-starter-task-spark-yarn
+          description: Spark Yarn Starter
+          groupId: org.springframework.cloud.task.app
+          artifactId: spring-cloud-starter-task-spark-yarn
+          scope: compile
+          starter: true
+          bom: spring-cloud-task-bom
+        - name: Sqoop Job
+          id: spring-cloud-starter-task-sqoop-job
+          description: Sqoop Job Starter
+          groupId: org.springframework.cloud.task.app
+          artifactId: spring-cloud-starter-task-sqoop-job
+          scope: compile
+          starter: true
+          bom: spring-cloud-task-bom
+        - name: Sqoop Tool
+          id: spring-cloud-starter-task-sqoop-tool
+          description: Sqoop Tool Starter
+          groupId: org.springframework.cloud.task.app
+          artifactId: spring-cloud-starter-task-sqoop-tool
+          scope: compile
+          starter: true
+          bom: spring-cloud-task-bom
   types:
     - name: Maven Project
       id: maven-project
