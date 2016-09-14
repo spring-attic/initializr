@@ -4,7 +4,7 @@ info:
     version: 0.4.0
   # remember to update static/install.sh as well:
   spring-boot:
-    version: 1.3.3.RELEASE
+    version: 1.3.5.RELEASE
 
 server:
   compression:
@@ -18,12 +18,12 @@ initializr:
       spring-cloud-stream-bom:
         groupId: org.springframework.cloud.stream.app
         artifactId: spring-cloud-stream-app-dependencies
-        version: 1.0.0.M1
+        version: 1.0.2.RELEASE
         repositories: spring-snapshots,spring-milestones
       spring-cloud-task-bom:
         groupId: org.springframework.cloud.task.app
         artifactId: spring-cloud-task-app-dependencies
-        version: 1.0.0.M1
+        version: 1.0.1.RELEASE
         repositories: spring-snapshots,spring-milestones
       vaadin-bom:
         groupId: com.vaadin
