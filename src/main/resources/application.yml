@@ -252,14 +252,6 @@ initializr:
           scope: compile
           starter: true
           bom: spring-cloud-stream-bom
-        - name: PMML Processor
-          id: spring-cloud-starter-stream-processor-pmml
-          description: PMML Processor Starter
-          groupId: org.springframework.cloud.stream.app
-          artifactId: spring-cloud-starter-stream-processor-pmml
-          scope: compile
-          starter: true
-          bom: spring-cloud-stream-bom
         - name: Scriptable Transform Processor
           id: spring-cloud-starter-stream-processor-scriptable-transform
           description: Scriptable Transform Processor Starter
@@ -278,7 +270,7 @@ initializr:
           bom: spring-cloud-stream-bom
         - name: Transform Processor
           id: spring-cloud-starter-stream-processor-transform
-          description: Splitter Processor Starter
+          description: Transform Processor Starter
           groupId: org.springframework.cloud.stream.app
           artifactId: spring-cloud-starter-stream-processor-transform
           scope: compile
@@ -409,6 +401,78 @@ initializr:
           description: Websocket Sink Starter
           groupId: org.springframework.cloud.stream.app
           artifactId: spring-cloud-starter-stream-sink-websocket
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Mail Source
+          id: spring-cloud-starter-stream-source-mail
+          description: Mail Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-mail
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: MongoDB Source
+          id: spring-cloud-starter-stream-source-mongodb
+          description: MongoDB Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-mongodb
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: S3 Sink
+          id: spring-cloud-starter-stream-sink-s3
+          description: S3 Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-s3
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: S3 Source
+          id: spring-cloud-starter-stream-source-s3
+          description: S3 Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-s3
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Task Launcher Local
+          id: spring-cloud-starter-stream-sink-tasklauncher-local
+          description: Task Launcher Local Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-tasklauncher-local
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Task Launcher Yarn
+          id: spring-cloud-starter-stream-sink-tasklauncher-yarn
+          description: Task Launcher Yarn Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-tasklauncher-yarn
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: TCP Client Processor
+          id: spring-cloud-starter-stream-processor-tcp-client
+          description: TCP Client Processor Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-tcp-client
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: TCP Client Source
+          id: spring-cloud-starter-stream-source-tcp-client
+          description: TCP Client Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-tcp-client
+          scope: compile
+          starter: true
+          bom: spring-cloud-stream-bom
+        - name: Trigger Task Source
+          id: spring-cloud-starter-stream-source-triggertask
+          description: Trigger Task Source Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-source-triggertask
           scope: compile
           starter: true
           bom: spring-cloud-stream-bom
