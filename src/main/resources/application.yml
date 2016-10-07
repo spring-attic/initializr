@@ -18,7 +18,7 @@ initializr:
       spring-cloud-stream-bom:
         groupId: org.springframework.cloud.stream.app
         artifactId: spring-cloud-stream-app-dependencies
-        version: 1.0.2.RELEASE
+        version: 1.0.4.RELEASE
         repositories: spring-snapshots,spring-milestones
       spring-cloud-task-bom:
         groupId: org.springframework.cloud.task.app
