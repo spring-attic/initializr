@@ -693,7 +693,7 @@ initializr:
           artifactId: spring-cloud-starter-stream-sink-tasklauncher-local
           scope: compile
           starter: true
-          bom: task-launcher-local-bom
+          bom: tasklauncher-local-bom
         - name: Task Launcher Yarn
           id: spring-cloud-starter-stream-sink-tasklauncher-yarn
           description: Task Launcher Yarn Sink Starter
@@ -701,7 +701,7 @@ initializr:
           artifactId: spring-cloud-starter-stream-sink-tasklauncher-yarn
           scope: compile
           starter: true
-          bom: task-launcher-yarn-bom
+          bom: tasklauncher-yarn-bom
         - name: TCP Client Processor
           id: spring-cloud-starter-stream-processor-tcp-client
           description: TCP Client Processor Starter
