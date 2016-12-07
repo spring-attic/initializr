@@ -734,6 +734,7 @@ initializr:
           groupId: org.springframework.cloud
           artifactId: spring-cloud-stream-binder-kafka
           scope: compile
+          bom: app-starters-core-bom
           starter: false
         - name: Rabbit binder starter
           id: spring-cloud-starter-stream-rabbit
@@ -741,6 +742,7 @@ initializr:
           groupId: org.springframework.cloud
           artifactId: spring-cloud-stream-binder-rabbit
           scope: compile
+          bom: app-starters-core-bom
           starter: false
     - name: Spring Cloud Task Starter Applications
       content:
