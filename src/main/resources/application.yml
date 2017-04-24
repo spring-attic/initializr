@@ -1,10 +1,7 @@
-info:
-  project:
-    name: Initializr for Spring Cloud Stream (SCS)
-    version: 0.4.0
-  # remember to update static/install.sh as well:
-  spring-boot:
-    version: 1.3.5.RELEASE
+logging:
+  level:
+    org.springframework.core.env: warn
+    org.springframework.jndi: warn
 
 server:
   compression:
@@ -12,270 +9,307 @@ server:
     mime-types: application/json,text/css,text/html
     min-response-size: 2048
 
+spring:
+  jackson:
+    serialization:
+     write-dates-as-timestamps: false
+  resources:
+    chain:
+      strategy:
+        content:
+          enabled: true
+
 initializr:
   env:
+# --> Extra Repository in addition to `spring-snapshots` and `spring-milestones`
+    repositories:
+      gemstone-release-pivotal:
+        name: Gemstone Release Pivotal
+        url: http://repo.spring.io/gemstone-release-pivotal
+        snapshots-enabled: false
     boms:
+
+# --> Begin of Spring Cloud Stream/Task BOMs
+
       app-starters-core-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: app-starters-core-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           repositories: spring-snapshots,spring-milestones
       aggregate-counter-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: aggregate-counter-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
+      aggregator-bom:
+          groupId: org.springframework.cloud.stream.app
+          artifactId: aggregator-app-dependencies
+          version: 1.2.0.RELEASE
+          additionalBoms: [app-starters-core-bom]
+          repositories: spring-snapshots,spring-milestones,gemstone-release-pivotal
       aws-s3-bom:
-            groupId: org.springframework.cloud.stream.app
-            artifactId: aws-s3-app-dependencies
-            version: 1.1.0.RC1
-            additionalBoms: [app-starters-core-bom]
-            repositories: spring-snapshots,spring-milestones
+          groupId: org.springframework.cloud.stream.app
+          artifactId: aws-s3-app-dependencies
+          version: 1.2.0.RELEASE
+          additionalBoms: [app-starters-core-bom]
+          repositories: spring-snapshots,spring-milestones
       bridge-bom:
-            groupId: org.springframework.cloud.stream.app
-            artifactId: bridge-app-dependencies
-            version: 1.1.0.RC1
-            additionalBoms: [app-starters-core-bom]
-            repositories: spring-snapshots,spring-milestones
+          groupId: org.springframework.cloud.stream.app
+          artifactId: bridge-app-dependencies
+          version: 1.2.0.RELEASE
+          additionalBoms: [app-starters-core-bom]
+          repositories: spring-snapshots,spring-milestones
       cassandra-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: cassandra-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
+          additionalBoms: [app-starters-core-bom]
+          repositories: spring-snapshots,spring-milestones
+      composed-task-runner-bom:
+          groupId: org.springframework.cloud.task.app
+          artifactId: composedtaskrunner-task-app-dependencies
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       counter-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: counter-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       field-value-counter-bom:
-            groupId: org.springframework.cloud.stream.app
-            artifactId: field-value-counter-app-dependencies
-            version: 1.1.0.RC1
-            additionalBoms: [app-starters-core-bom]
-            repositories: spring-snapshots,spring-milestones
+          groupId: org.springframework.cloud.stream.app
+          artifactId: field-value-counter-app-dependencies
+          version: 1.2.0.RELEASE
+          additionalBoms: [app-starters-core-bom]
+          repositories: spring-snapshots,spring-milestones
       file-bom:
-            groupId: org.springframework.cloud.stream.app
-            artifactId: file-app-dependencies
-            version: 1.1.0.RC1
-            additionalBoms: [app-starters-core-bom]
-            repositories: spring-snapshots,spring-milestones
+          groupId: org.springframework.cloud.stream.app
+          artifactId: file-app-dependencies
+          version: 1.2.0.RELEASE
+          additionalBoms: [app-starters-core-bom]
+          repositories: spring-snapshots,spring-milestones
       filter-bom:
             groupId: org.springframework.cloud.stream.app
             artifactId: filter-app-dependencies
-            version: 1.1.0.RC1
+            version: 1.2.0.RELEASE
             additionalBoms: [app-starters-core-bom]
             repositories: spring-snapshots,spring-milestones
       ftp-bom:
             groupId: org.springframework.cloud.stream.app
             artifactId: ftp-app-dependencies
-            version: 1.1.0.RC1
+            version: 1.2.0.RELEASE
             additionalBoms: [app-starters-core-bom]
             repositories: spring-snapshots,spring-milestones
       gemfire-bom:
             groupId: org.springframework.cloud.stream.app
             artifactId: gemfire-app-dependencies
-            version: 1.1.0.RC1
+            version: 1.2.0.RELEASE
             additionalBoms: [app-starters-core-bom]
             repositories: spring-snapshots,spring-milestones
       gpfdist-bom:
             groupId: org.springframework.cloud.stream.app
             artifactId: gpfdist-app-dependencies
-            version: 1.1.0.RC1
+            version: 1.2.0.RELEASE
             additionalBoms: [app-starters-core-bom]
             repositories: spring-snapshots,spring-milestones
       groovy-filter-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: groovy-filter-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       groovy-transform-bom:
             groupId: org.springframework.cloud.stream.app
             artifactId: groovy-transform-app-dependencies
-            version: 1.1.0.RC1
+            version: 1.2.0.RELEASE
             additionalBoms: [app-starters-core-bom]
             repositories: spring-snapshots,spring-milestones
       hdfs-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: hdfs-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
+      header-enricher-bom:
+            groupId: org.springframework.cloud.stream.app
+            artifactId: header-enricher-app-dependencies
+            version: 1.2.0.RELEASE
+            additionalBoms: [app-starters-core-bom]
+            repositories: spring-snapshots,spring-milestones
       http-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: http-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       httpclient-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: httpclient-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       jdbc-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: jdbc-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       jms-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: jms-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       load-generator-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: load-generator-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       log-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: log-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       loggregator-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: loggregator-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       mail-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: mail-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       mongodb-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: mongodb-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       pmml-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: pmml-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       rabbit-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: rabbit-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       redis-pubsub-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: redis-pubsub-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       router-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: router-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       scriptable-transform-bom:
             groupId: org.springframework.cloud.stream.app
             artifactId: scriptable-transform-app-dependencies
-            version: 1.1.0.RC1
+            version: 1.2.0.RELEASE
             additionalBoms: [app-starters-core-bom]
             repositories: spring-snapshots,spring-milestones
       sftp-bom:
             groupId: org.springframework.cloud.stream.app
             artifactId: sftp-app-dependencies
-            version: 1.1.0.RC1
+            version: 1.2.0.RELEASE
             additionalBoms: [app-starters-core-bom]
             repositories: spring-snapshots,spring-milestones
       splitter-bom:
             groupId: org.springframework.cloud.stream.app
             artifactId: splitter-app-dependencies
-            version: 1.1.0.RC1
+            version: 1.2.0.RELEASE
             additionalBoms: [app-starters-core-bom]
             repositories: spring-snapshots,spring-milestones
       syslog-bom:
             groupId: org.springframework.cloud.stream.app
             artifactId: syslog-app-dependencies
-            version: 1.1.0.RC1
+            version: 1.2.0.RELEASE
             additionalBoms: [app-starters-core-bom]
             repositories: spring-snapshots,spring-milestones
       tasklauncher-cloudfoundry-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: tasklauncher-cloudfoundry-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       tasklauncher-local-bom:
             groupId: org.springframework.cloud.stream.app
             artifactId: tasklauncher-local-app-dependencies
-            version: 1.1.0.RC1
+            version: 1.2.0.RELEASE
             additionalBoms: [app-starters-core-bom]
             repositories: spring-snapshots,spring-milestones
       tasklauncher-yarn-bom:
             groupId: org.springframework.cloud.stream.app
             artifactId: tasklauncher-yarn-app-dependencies
-            version: 1.1.0.RC1
+            version: 1.2.0.RELEASE
             additionalBoms: [app-starters-core-bom]
             repositories: spring-snapshots,spring-milestones
       tasklaunchrequest-transform-bom:
             groupId: org.springframework.cloud.stream.app
             artifactId: tasklaunchrequest-transform-app-dependencies
-            version: 1.1.0.RC1
+            version: 1.2.0.RELEASE
             additionalBoms: [app-starters-core-bom]
             repositories: spring-snapshots,spring-milestones
       tcp-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: tcp-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       throughput-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: throughput-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       time-bom:
             groupId: org.springframework.cloud.stream.app
             artifactId: time-app-dependencies
-            version: 1.1.0.RC1
+            version: 1.2.0.RELEASE
             additionalBoms: [app-starters-core-bom]
             repositories: spring-snapshots,spring-milestones
       transform-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: transform-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       trigger-bom:
             groupId: org.springframework.cloud.stream.app
             artifactId: trigger-app-dependencies
-            version: 1.1.0.RC1
+            version: 1.2.0.RELEASE
             additionalBoms: [app-starters-core-bom]
             repositories: spring-snapshots,spring-milestones
       triggertask-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: triggertask-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       twitter-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: twitter-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       websocket-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: websocket-app-dependencies
-          version: 1.1.0.RC1
+          version: 1.2.0.RELEASE
           additionalBoms: [app-starters-core-bom]
           repositories: spring-snapshots,spring-milestones
       spring-cloud-task-bom:
@@ -283,33 +317,108 @@ initializr:
         artifactId: spring-cloud-task-app-dependencies
         version: 1.0.1.RELEASE
         repositories: spring-snapshots,spring-milestones
-      vaadin-bom:
-        groupId: com.vaadin
-        artifactId: vaadin-bom
-        version: 7.6.3
+
+# --> End of Spring Cloud Stream/Task BOMs
+
       cloud-bom:
         groupId: org.springframework.cloud
         artifactId: spring-cloud-dependencies
+        order: 50
         mappings:
-          - versionRange: "[1.2.3.RELEASE,1.3.0.M1)"
+          - versionRange: "[1.2.3.RELEASE,1.3.0.RELEASE)"
             version: Angel.SR6
-          - versionRange: "[1.3.0.M2,1.3.2.RELEASE]"
-            version: Brixton.M5
-            repositories: spring-snapshots,spring-milestones
-          - versionRange: 1.3.3.BUILD-SNAPSHOT
-            version: Brixton.BUILD-SNAPSHOT
+          - versionRange: "[1.3.0.RELEASE,1.4.0.RELEASE)"
+            version: Brixton.SR7
+          - versionRange: "[1.4.0.RELEASE,1.5.x.RELEASE)"
+            version: Camden.SR6
+          - versionRange: "[1.5.0.RELEASE,1.5.x.BUILD-SNAPSHOT)"
+            version: Dalston.RELEASE
+          - versionRange: "1.5.x.BUILD-SNAPSHOT"
+            version: Dalston.BUILD-SNAPSHOT
             repositories: spring-snapshots,spring-milestones
       cloud-dataflow-bom:
         groupId: org.springframework.cloud
         artifactId: spring-cloud-dataflow-dependencies
-        version: 1.1.0.RELEASE
+        order: 20
+        additionalBoms: [cloud-task-bom,cloud-bom]
+        mappings:
+          - versionRange: "[1.3.2.RELEASE,1.4.0.RELEASE)"
+            version: 1.0.1.RELEASE
+          - versionRange: "[1.4.0.RELEASE,1.4.x.BUILD-SNAPSHOT)"
+            version: 1.1.4.RELEASE
+          - versionRange: "[1.4.x.BUILD-SNAPSHOT, 1.5.0.RC1)"
+            version: 1.1.5.BUILD-SNAPSHOT
+            repositories: spring-snapshots,spring-milestones
+          - versionRange: "[1.5.0.RC1, 2.0.0.M1)"
+            version: 1.2.0.BUILD-SNAPSHOT
+            repositories: spring-snapshots,spring-milestones
+      cloud-services-bom:
+        groupId: io.pivotal.spring.cloud
+        artifactId: spring-cloud-services-dependencies
         additionalBoms: [cloud-bom]
-        repositories: spring-snapshots,spring-milestones
+        mappings:
+          - versionRange: "[1.3.0.RELEASE,1.4.0.RELEASE)"
+            version: 1.2.1.RELEASE
+          - versionRange: "[1.4.0.RELEASE,1.5.x.RELEASE]"
+            version: 1.4.1.RELEASE
+          - versionRange: "[1.5.x.BUILD-SNAPSHOT, 2.0.0.M1)"
+            version: 1.4.2.BUILD-SNAPSHOT
+            repositories: spring-snapshots,spring-milestones
+      cloud-task-bom:
+        groupId: org.springframework.cloud
+        artifactId: spring-cloud-task-dependencies
+        order: 30
+        mappings:
+          - versionRange: "[1.3.0.RELEASE, 1.4.0.RELEASE]"
+            version: 1.0.3.RELEASE
+          - versionRange: "[1.4.0.RELEASE, 1.5.0.RC1)"
+            version: 1.1.2.RELEASE
+          - versionRange: "1.5.0.RC1"
+            version: 1.2.0.RC1
+            repositories: spring-milestones
+      vaadin-bom:
+        groupId: com.vaadin
+        artifactId: vaadin-bom
+        mappings:
+          - versionRange: "[1.3.0.RELEASE, 1.5.0.M1)"
+            version: 7.7.5
+          - versionRange: "1.5.0.M1"
+            version: 8.0.5
+      stormpath-bom:
+        groupId: com.stormpath.sdk
+        artifactId: stormpath-bom
+        version: 1.5.2
+    gradle:
+      dependency-management-plugin-version: 0.6.0.RELEASE
     kotlin:
-      version: 1.0.0
+      version: 1.1.1
   dependencies:
     - name: Spring Cloud Stream Starter Applications
       content:
+        - name: Aggregator
+          id: spring-cloud-starter-stream-processor-aggregator
+          description: Aggregator Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-aggregator
+          scope: compile
+          starter: true
+          bom: aggregator-bom
+        - name: Header Enricher
+          id: spring-cloud-starter-stream-processor-header-enricher
+          description: Header Enricher Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-header-enricher
+          scope: compile
+          starter: true
+          bom: header-enricher-bom
+        - name: Composed Task Runner
+          id: spring-cloud-starter-task-composedtaskrunner
+          description: Composed Task Runner Starter
+          groupId: org.springframework.cloud.task.app
+          artifactId: spring-cloud-starter-task-composedtaskrunner
+          scope: compile
+          starter: true
+          bom: composed-task-runner-bom
         - name: Cassandra Sink
           id: spring-cloud-starter-stream-sink-cassandra
           description: Cassandra Sink Starter
@@ -427,6 +536,14 @@ initializr:
           description: JDBC Sink Starter
           groupId: org.springframework.cloud.stream.app
           artifactId: spring-cloud-starter-stream-sink-jdbc
+          scope: compile
+          starter: true
+          bom: jdbc-bom
+        - name: Pgcopy Sink
+          id: spring-cloud-starter-stream-sink-pgcopy
+          description: Pgcopy Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-pgcopy
           scope: compile
           starter: true
           bom: jdbc-bom
@@ -670,6 +787,14 @@ initializr:
           scope: compile
           starter: true
           bom: mongodb-bom
+        - name: MongoDB Sink
+          id: spring-cloud-starter-stream-sink-mongodb
+          description: MongoDB Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-mongodb
+          scope: compile
+          starter: true
+          bom: mongodb-bom
         - name: S3 Sink
           id: spring-cloud-starter-stream-sink-s3
           description: S3 Sink Starter
@@ -857,3 +982,4 @@ initializr:
     - name: 1.1.12
       id: 1.1.12.RELEASE
       default: false
+

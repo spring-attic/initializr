@@ -45,7 +45,7 @@ public class ScsProjectGenerator extends ProjectGenerator {
 
 			final File dockerDir = new File(dir, "src/main/docker");
 			dockerDir.mkdirs();
-			write(new File(dockerDir, "assembly.xml"), "assembly.xml", initializeModel(request));
+			write(new File(dockerDir, "assembly.xml"), "assembly.xml", resolveModel(request));
 
 			final File inputFile = new File(dir, "pom.xml");
 			final File tempOutputFile = new File(dir, "pom_tmp.xml");
