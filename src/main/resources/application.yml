@@ -892,7 +892,7 @@ initializr:
           artifactId: spring-cloud-starter-stream-processor-tensorflow
           scope: compile
           starter: true
-          bom: tesnorflow-bom
+          bom: tensorflow-bom
         - name: Twitter Sentiment Processor
           id: spring-cloud-starter-stream-processor-twitter-sentiment
           description: Twitter Sentiment Processor Starter
@@ -900,7 +900,7 @@ initializr:
           artifactId: spring-cloud-starter-stream-processor-twitter-sentiment
           scope: compile
           starter: true
-          bom: tesnorflow-bom
+          bom: tensorflow-bom
         - name: Python HTTP Processor
           id: spring-cloud-starter-stream-processor-python-http
           description: Python HTTP Processor Starter
