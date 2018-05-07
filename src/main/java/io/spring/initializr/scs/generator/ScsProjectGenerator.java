@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 the original author or authors.
+ * Copyright 2016-2018 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,9 +34,9 @@ import io.spring.initializr.scs.generator.utils.MavenUtils;
 public class ScsProjectGenerator extends ProjectGenerator {
 
 	@Override
-	protected File doGenerateProjectStructure(ProjectRequest request) {
+	public File generateProjectStructure(ProjectRequest request) {
 
-		final File rootDir = super.doGenerateProjectStructure(request);
+		final File rootDir = super.generateProjectStructure(request);
 
 		boolean mavenBuild = "maven".equals(request.getBuild());
 

@@ -5,32 +5,31 @@
 
 	<groupId>io.spring.initalizr</groupId>
 	<artifactId>initializr-scs</artifactId>
-	<version>1.0.0.BUILD-SNAPSHOT</version>
+	<version>1.1.0.BUILD-SNAPSHOT</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.boot.version>1.4.6.RELEASE</spring.boot.version>
+		<spring.boot.version>1.5.10.RELEASE</spring.boot.version>
 		<java.version>1.8</java.version>
 	</properties>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.6.RELEASE</version>
+		<version>1.5.10.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>io.spring.initializr</groupId>
 			<artifactId>initializr-generator</artifactId>
-			<version>0.4.0.BUILD-SNAPSHOT</version>
+			<version>0.5.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>io.spring.initializr</groupId>
 			<artifactId>initializr-web</artifactId>
-			<version>0.4.0.BUILD-SNAPSHOT</version>
+			<version>0.5.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
