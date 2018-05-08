@@ -1,0 +1,9 @@
+applications:
+- name: start-scs-staging
+  path: target/initializr-scs-1.1.0.BUILD-SNAPSHOT.jar
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  routes:
+  - route: start-scs-staging.cfapps.io
+

@@ -1,4 +1,13 @@
 language: java
 jdk:
-  - oraclejdk8
-
+- oraclejdk8
+deploy:
+  manifest: manifest-staging.yml
+  provider: cloudfoundry
+  api: https://api.run.pivotal.io
+  username: $CF_USERNAME
+  organization: FrameworksAndRuntimes
+  space: ghillert
+  on:
+    repo: spring-cloud-stream-app-starters/initializr
+  password: $CF_PASSWORD
