@@ -1051,6 +1051,105 @@ initializr:
           scope: compile
           starter: true
           bom: spring-cloud-task-bom
+    - name: Micrometer
+      content:
+      - id: micrometer-registry-atlas
+        artifactId: micrometer-registry-atlas
+        version: 1.0.4
+        name: Atlas
+        description: Micrometer implementation for Atlas
+        groupId: io.micrometer
+        scope: compile
+        starter: false
+      - id: micrometer-registry-datadog
+        artifactId: micrometer-registry-datadog
+        version: 1.0.4
+        name: Datadog
+        description: Micrometer implementation for Datadog
+        groupId: io.micrometer
+        scope: compile
+        starter: false
+      - id: micrometer-registry-ganglia
+        artifactId: micrometer-registry-ganglia
+        version: 1.0.4
+        name: Ganglia
+        description: Micrometer implementation for Ganglia
+        groupId: io.micrometer
+        scope: compile
+        starter: false
+      - id: micrometer-registry-graphite
+        artifactId: micrometer-registry-graphite
+        version: 1.0.4
+        name: Graphite
+        description: Micrometer implementation for Graphite
+        groupId: io.micrometer
+        scope: compile
+        starter: false
+      - id: micrometer-registry-influx
+        artifactId: micrometer-registry-influx
+        version: 1.0.4
+        name: Influx
+        description: Micrometer implementation for Influx
+        groupId: io.micrometer
+        scope: compile
+        starter: false
+      - id: micrometer-registry-jmx
+        artifactId: micrometer-registry-jmx
+        version: 1.0.4
+        name: JMX
+        description: Micrometer implementation for JMX
+        groupId: io.micrometer
+        scope: compile
+        starter: false
+      - id: micrometer-registry-new-relic
+        artifactId: micrometer-registry-new-relic
+        version: 1.0.4
+        name: New Relic
+        description: Micrometer implementation for New Relic
+        groupId: io.micrometer
+        scope: compile
+        starter: false
+      - id: micrometer-registry-prometheus
+        artifactId: micrometer-registry-prometheus
+        version: 1.0.4
+        name: Prometheus
+        description: Micrometer implementation for Prometheus
+        groupId: io.micrometer
+        scope: compile
+        starter: false
+      - id: micrometer-registry-signalfx
+        artifactId: micrometer-registry-signalfx
+        version: 1.0.4
+        name: SignalFx
+        description: Micrometer implementation for SignalFx
+        groupId: io.micrometer
+        scope: compile
+        starter: false
+      - id: micrometer-registry-statsd
+        artifactId: micrometer-registry-statsd
+        version: 1.0.4
+        name: StatsD
+        description: Micrometer implementation for StatsD
+        groupId: io.micrometer
+        scope: compile
+        starter: false
+      - id: micrometer-registry-wavefront
+        artifactId: micrometer-registry-wavefront
+        version: 1.0.4
+        name: Wavefront
+        description: Micrometer implementation for Wavefront
+        groupId: io.micrometer
+        scope: compile
+        starter: false
+      - id: micrometer-spring-legacy
+        artifactId: micrometer-spring-legacy
+        version: 1.0.4
+        name: Spring Bindings for Micrometer
+        description: Spring Bindings for Micrometer (Boot 1.x)
+        versionRange: "[1.0.0.RELEASE,2.0.0.M1)"
+        groupId: org.springframework.cloud
+        scope: compile
+        starter: false
   types:
     - name: Maven Project
       id: maven-project
