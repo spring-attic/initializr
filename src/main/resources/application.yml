@@ -551,25 +551,31 @@ initializr:
         artifactId: timestamp-task-app-dependencies
         additionalBoms: [app-starters-core-bom]
         mappings:
+        - versionRange: "[1.0.0.RELEASE,2.0.0.M1)"
+          version: 1.3.0.RELEASE
         - versionRange: "[2.0.0.M1,3.0.0.M1)"
           version: 2.0.0.M1
+          repositories: spring-snapshots,spring-milestones
       timestamp-batch-task-bom:
         groupId: org.springframework.cloud.task.app
         artifactId: timestamp-batch-task-app-dependencies
         additionalBoms: [app-starters-core-bom]
         mappings:
+        - versionRange: "[1.0.0.RELEASE,2.0.0.M1)"
+          version: 1.0.0.RELEASE
         - versionRange: "[2.0.0.M1,3.0.0.M1)"
           version: 2.0.0.M1
+          repositories: spring-snapshots,spring-milestones
       composed-task-runner-bom:
-          groupId: org.springframework.cloud.task.app
-          artifactId: composedtaskrunner-task-app-dependencies
-          additionalBoms: [app-starters-core-bom]
-          mappings:
-          - versionRange: "[1.0.0.RELEASE,2.0.0.M1)"
-            version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.M1,3.0.0.M1)"
-            version: 2.0.0.RC1
-            repositories: spring-snapshots,spring-milestones
+        groupId: org.springframework.cloud.task.app
+        artifactId: composedtaskrunner-task-app-dependencies
+        additionalBoms: [app-starters-core-bom]
+        mappings:
+        - versionRange: "[1.0.0.RELEASE,2.0.0.M1)"
+          version: 1.1.1.RELEASE
+        - versionRange: "[2.0.0.M1,3.0.0.M1)"
+          version: 2.0.0.M1
+          repositories: spring-snapshots,spring-milestones
 # --> End of Spring Cloud Stream/Task BOMs
 
       cloud-dataflow-bom:
@@ -1268,7 +1274,7 @@ initializr:
           artifactId: spring-cloud-starter-task-timestamp
           scope: compile
           starter: true
-          versionRange: "[2.0.0.M1,3.0.0.M1)"
+          versionRange: "[1.0.0.RELEASE,3.0.0.M1)"
           bom: timestamp-task-bom
         - name: Timestamp Batch
           id: spring-cloud-starter-task-timestamp-batch
@@ -1277,7 +1283,7 @@ initializr:
           artifactId: spring-cloud-starter-task-timestamp-batch
           scope: compile
           starter: true
-          versionRange: "[2.0.0.M1,3.0.0.M1)"
+          versionRange: "[1.0.0.RELEASE,3.0.0.M1)"
           bom: timestamp-batch-task-bom
         - name: Composed Task Runner
           id: spring-cloud-starter-task-composedtaskrunner
@@ -1286,10 +1292,19 @@ initializr:
           artifactId: spring-cloud-starter-task-composedtaskrunner
           scope: compile
           starter: true
-          versionRange: "[2.0.0.M1,3.0.0.M1)"
+          versionRange: "[1.0.0.RELEASE,3.0.0.M1)"
           bom: composed-task-runner-bom
     - name: Micrometer
       content:
+      - id: micrometer-spring-legacy
+        artifactId: micrometer-spring-legacy
+        version: 1.0.4
+        name: Spring Bindings for Micrometer
+        description: Spring Bindings for Micrometer (Mandatory for Boot 1.x)
+        versionRange: "[1.0.0.RELEASE,2.0.0.M1)"
+        groupId: io.micrometer
+        scope: compile
+        starter: false
       - id: micrometer-registry-atlas
         artifactId: micrometer-registry-atlas
         version: 1.0.4
@@ -1376,15 +1391,6 @@ initializr:
         name: Wavefront
         description: Micrometer implementation for Wavefront
         groupId: io.micrometer
-        scope: compile
-        starter: false
-      - id: micrometer-spring-legacy
-        artifactId: micrometer-spring-legacy
-        version: 1.0.4
-        name: Spring Bindings for Micrometer
-        description: Spring Bindings for Micrometer (Boot 1.x)
-        versionRange: "[1.0.0.RELEASE,2.0.0.M1)"
-        groupId: org.springframework.cloud
         scope: compile
         starter: false
   types:
