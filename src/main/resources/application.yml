@@ -1237,14 +1237,6 @@ initializr:
           scope: compile
           bom: app-starters-core-bom
           starter: false
-        - name: Kafka Streams binder starter
-          id: spring-cloud-starter-stream-kafka-streams
-          description: Kafka Streams binder starter implementation
-          groupId: org.springframework.cloud
-          artifactId: spring-cloud-stream-binder-kafka-streams
-          scope: compile
-          bom: app-starters-core-bom
-          starter: false
         - name: Google Cloud Pub/Sub binder starter
           id: spring-cloud-starter-stream-spring-cloud-gcp-pubsub-stream-binder
           description: Google Cloud Pub/Sub binder for Spring Cloud Stream
