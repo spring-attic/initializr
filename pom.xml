@@ -5,7 +5,7 @@
 
 	<groupId>io.spring.initalizr</groupId>
 	<artifactId>initializr-scs</artifactId>
-	<version>1.1.0.BUILD-SNAPSHOT</version>
+	<version>1.3.0.BUILD-SNAPSHOT</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

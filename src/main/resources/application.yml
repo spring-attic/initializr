@@ -1237,6 +1237,24 @@ initializr:
           scope: compile
           bom: app-starters-core-bom
           starter: false
+        - name: Google Cloud Pub/Sub binder starter
+          id: spring-cloud-starter-stream-spring-cloud-gcp-pubsub-stream-binder
+          description: Google Cloud Pub/Sub binder for Spring Cloud Stream
+          groupId: org.springframework.cloud
+          artifactId: spring-cloud-gcp-pubsub-stream-binder
+          version: 1.0.0.RELEASE
+          scope: compile
+          bom: app-starters-core-bom
+          starter: false
+        - name: Kinesis binder starter
+          id: spring-cloud-starter-stream-kinesis
+          description: AWS Kinesis Binder Implementation
+          groupId: org.springframework.cloud
+          artifactId: spring-cloud-stream-binder-kinesis
+          version: 1.0.0.RELEASE
+          scope: compile
+          bom: app-starters-core-bom
+          starter: false
     - name: Spring Cloud Task Starter Applications
       content:
         - name: Spark Client
