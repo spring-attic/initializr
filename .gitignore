@@ -6,3 +6,4 @@ rebel.xml
 *.iml
 *.ipr
 *.iws
+.idea/

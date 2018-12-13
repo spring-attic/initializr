@@ -15,12 +15,17 @@
  */
 package io.spring.initializr.scs;
 
+import io.spring.initializr.generator.ProjectGenerator;
+import io.spring.initializr.generator.ProjectRequest;
+import io.spring.initializr.generator.ProjectRequestPostProcessor;
+import io.spring.initializr.metadata.Dependency;
+import io.spring.initializr.metadata.InitializrMetadata;
+import io.spring.initializr.scs.generator.ScsProjectGenerator;
+import io.spring.initializr.util.Version;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
-import io.spring.initializr.generator.ProjectGenerator;
-import io.spring.initializr.scs.generator.ScsProjectGenerator;
 
 /**
  *
@@ -30,6 +35,8 @@ import io.spring.initializr.scs.generator.ScsProjectGenerator;
 @SpringBootApplication
 public class InitializrScsApplication {
 
+	private static final Version BOOT_2_1_X_VERSION = Version.parse("2.1.0.RELEASE");
+
 	public static void main(String[] args) {
 		SpringApplication.run(InitializrScsApplication.class, args);
 	}
@@ -37,5 +44,29 @@ public class InitializrScsApplication {
 	@Bean
 	public ProjectGenerator projectGenerator() {
 		return new ScsProjectGenerator();
+	}
+
+	@Bean
+	public ProjectRequestPostProcessor webActuatorProjectRequestPostProcessor() {
+		return new ProjectRequestPostProcessor() {
+
+			@Override
+			public void postProcessAfterResolution(ProjectRequest request, InitializrMetadata metadata) {
+				// Inject the required by SCDF spring-boot-starter-web and spring-boot-starter-actuator dependencies
+				Version bootVersion = Version.parse(request.getBootVersion());
+				if (request.getResolvedDependencies() != null && bootVersion.compareTo(BOOT_2_1_X_VERSION) >= 0) {
+
+					Dependency starterWeb = new Dependency();
+					starterWeb.setGroupId("org.springframework.boot");
+					starterWeb.setArtifactId("spring-boot-starter-web");
+					request.getResolvedDependencies().add(starterWeb);
+
+					Dependency starterActuator = new Dependency();
+					starterActuator.setGroupId("org.springframework.boot");
+					starterActuator.setArtifactId("spring-boot-starter-actuator");
+					request.getResolvedDependencies().add(starterActuator);
+				}
+			}
+		};
 	}
 }
