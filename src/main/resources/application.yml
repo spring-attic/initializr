@@ -52,6 +52,14 @@ initializr:
 
 # --> Begin of Spring Cloud Stream/Task BOMs
 
+      analytics-bom:
+          groupId: org.springframework.cloud.stream.app
+          artifactId: analytics-app-dependencies
+          additionalBoms: [app-starters-core-bom]
+          mappings:
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
+            repositories: spring-snapshots,spring-milestones
       app-starters-core-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: app-starters-core-dependencies
@@ -61,7 +69,7 @@ initializr:
           - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
           - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
-            version: 2.1.0.BUILD-SNAPSHOT
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       aggregate-counter-bom:
           groupId: org.springframework.cloud.stream.app
@@ -70,8 +78,8 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
-            version: 2.0.0.RELEASE
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
+            version: 2.0.2.RELEASE
             repositories: spring-snapshots,spring-milestones
       aggregator-bom:
           groupId: org.springframework.cloud.stream.app
@@ -80,8 +88,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       aws-s3-bom:
           groupId: org.springframework.cloud.stream.app
@@ -90,8 +100,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       bridge-bom:
           groupId: org.springframework.cloud.stream.app
@@ -100,8 +112,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       cassandra-bom:
           groupId: org.springframework.cloud.stream.app
@@ -110,8 +124,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       counter-bom:
           groupId: org.springframework.cloud.stream.app
@@ -120,9 +136,8 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
-            version: 2.0.0.RELEASE
-            repositories: spring-snapshots,spring-milestones
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
+            version: 2.0.2.RELEASE
       field-value-counter-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: field-value-counter-app-dependencies
@@ -130,9 +145,8 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
-            version: 2.0.0.RELEASE
-            repositories: spring-snapshots,spring-milestones
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
+            version: 2.0.3.RELEASE
       file-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: file-app-dependencies
@@ -140,8 +154,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
-            version: 2.0.0.RELEASE
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
+            version: 2.0.2.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       filter-bom:
           groupId: org.springframework.cloud.stream.app
@@ -150,8 +166,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       ftp-bom:
           groupId: org.springframework.cloud.stream.app
@@ -160,8 +178,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
-            version: 2.0.1.RELEASE
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
+            version: 2.0.3.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       gemfire-bom:
           groupId: org.springframework.cloud.stream.app
@@ -170,8 +190,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       gpfdist-bom:
           groupId: org.springframework.cloud.stream.app
@@ -180,8 +202,15 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
-            version: 2.0.0.RELEASE
+      grpc-bom:
+          groupId: org.springframework.cloud.stream.app
+          artifactId: grpc-app-dependencies
+          additionalBoms: [app-starters-core-bom]
+          mappings:
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
+            version: 2.0.1.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       groovy-filter-bom:
           groupId: org.springframework.cloud.stream.app
@@ -190,8 +219,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       groovy-transform-bom:
           groupId: org.springframework.cloud.stream.app
@@ -200,8 +231,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       hdfs-bom:
           groupId: org.springframework.cloud.stream.app
@@ -210,8 +243,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       header-enricher-bom:
           groupId: org.springframework.cloud.stream.app
@@ -220,8 +255,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       http-bom:
           groupId: org.springframework.cloud.stream.app
@@ -231,8 +268,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       httpclient-bom:
           groupId: org.springframework.cloud.stream.app
@@ -241,8 +280,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       jdbc-bom:
           groupId: org.springframework.cloud.stream.app
@@ -251,8 +292,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       jms-bom:
           groupId: org.springframework.cloud.stream.app
@@ -261,8 +304,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       load-generator-bom:
           groupId: org.springframework.cloud.stream.app
@@ -271,8 +316,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       log-bom:
           groupId: org.springframework.cloud.stream.app
@@ -281,8 +328,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       loggregator-bom:
           groupId: org.springframework.cloud.stream.app
@@ -291,8 +340,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       mail-bom:
           groupId: org.springframework.cloud.stream.app
@@ -301,8 +352,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       mongodb-bom:
           groupId: org.springframework.cloud.stream.app
@@ -311,15 +364,23 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       pmml-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: pmml-app-dependencies
-          version: 1.3.1.RELEASE
           additionalBoms: [app-starters-core-bom]
-          repositories: spring-snapshots,spring-milestones
+          mappings:
+          - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
+            version: 1.3.1.RELEASE
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
+            version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
+            repositories: spring-snapshots,spring-milestones
       rabbit-bom:
           groupId: org.springframework.cloud.stream.app
           artifactId: rabbit-app-dependencies
@@ -327,8 +388,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       redis-pubsub-bom:
           groupId: org.springframework.cloud.stream.app
@@ -337,8 +400,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       router-bom:
           groupId: org.springframework.cloud.stream.app
@@ -347,8 +412,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       scriptable-transform-bom:
           groupId: org.springframework.cloud.stream.app
@@ -357,8 +424,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       sftp-bom:
           groupId: org.springframework.cloud.stream.app
@@ -367,8 +436,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
-            version: 2.0.1.RELEASE
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
+            version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       splitter-bom:
           groupId: org.springframework.cloud.stream.app
@@ -377,8 +448,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       syslog-bom:
           groupId: org.springframework.cloud.stream.app
@@ -387,8 +460,18 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
+            repositories: spring-snapshots,spring-milestones
+      tasklauncher-dataflow-bom:
+          groupId: org.springframework.cloud.stream.app
+          artifactId: tasklauncher-dataflow-app-dependencies
+          additionalBoms: [app-starters-core-bom]
+          mappings:
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 1.0.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       tasklauncher-cloudfoundry-bom:
           groupId: org.springframework.cloud.stream.app
@@ -397,7 +480,7 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       tasklauncher-local-bom:
@@ -407,7 +490,7 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       tasklauncher-yarn-bom:
@@ -417,7 +500,7 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       tasklaunchrequest-transform-bom:
@@ -427,8 +510,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       tcp-bom:
           groupId: org.springframework.cloud.stream.app
@@ -437,8 +522,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       throughput-bom:
           groupId: org.springframework.cloud.stream.app
@@ -447,8 +534,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       time-bom:
           groupId: org.springframework.cloud.stream.app
@@ -457,8 +546,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       transform-bom:
           groupId: org.springframework.cloud.stream.app
@@ -467,8 +558,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       trigger-bom:
           groupId: org.springframework.cloud.stream.app
@@ -477,8 +570,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       triggertask-bom:
           groupId: org.springframework.cloud.stream.app
@@ -487,8 +582,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       twitter-bom:
           groupId: org.springframework.cloud.stream.app
@@ -497,8 +594,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       websocket-bom:
           groupId: org.springframework.cloud.stream.app
@@ -507,8 +606,10 @@ initializr:
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
             version: 1.3.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       mqtt-bom:
           groupId: org.springframework.cloud.stream.app
@@ -516,19 +617,11 @@ initializr:
           additionalBoms: [app-starters-core-bom]
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
-            version: 1.0.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+            version: 1.3.1.RELEASE
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
-            repositories: spring-snapshots,spring-milestones
-      tensorflow-bom:
-          groupId: org.springframework.cloud.stream.app
-          artifactId: tensorflow-app-dependencies
-          additionalBoms: [app-starters-core-bom]
-          mappings:
-          - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
-            version: 1.0.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
-            version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       python-bom:
           groupId: org.springframework.cloud.stream.app
@@ -536,9 +629,21 @@ initializr:
           additionalBoms: [app-starters-core-bom]
           mappings:
           - versionRange: "[1.0.0.RELEASE,2.0.0.RELEASE)"
-            version: 1.0.1.RELEASE
-          - versionRange: "[2.0.0.RELEASE,3.0.0.RELEASE)"
+            version: 1.3.1.RELEASE
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
             version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
+            repositories: spring-snapshots,spring-milestones
+      tensorflow-bom:
+          groupId: org.springframework.cloud.stream.app
+          artifactId: tensorflow-app-dependencies
+          additionalBoms: [app-starters-core-bom]
+          mappings:
+          - versionRange: "[2.0.0.RELEASE,2.1.0.RELEASE)"
+            version: 2.0.0.RELEASE
+          - versionRange: "[2.1.0.RELEASE,3.0.0.RELEASE)"
+            version: 2.1.0.RELEASE
             repositories: spring-snapshots,spring-milestones
       spring-cloud-task-bom:
         groupId: org.springframework.cloud.task.app
@@ -733,6 +838,22 @@ initializr:
           scope: compile
           starter: true
           bom: aggregator-bom
+        - name: Spring Cloud Stream Sink Counter (Analytics)
+          id: spring-cloud-starter-stream-sink-counter
+          description: Spring Cloud Stream Sink Counter Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-counter
+          scope: compile
+          starter: true
+          bom: analytics-bom
+        - name: Spring Cloud Stream Processor Counter (Analytics)
+          id: spring-cloud-starter-stream-processor-counter
+          description: Spring Cloud Stream Processor Counter Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-counter
+          scope: compile
+          starter: true
+          bom: analytics-bom
         - name: Header Enricher
           id: spring-cloud-starter-stream-processor-header-enricher
           description: Header Enricher Starter
@@ -894,7 +1015,7 @@ initializr:
           starter: true
           bom: aggregate-counter-bom
         - name: Counter Sink
-          id: spring-cloud-starter-stream-sink-counter
+          id: spring-cloud-starter-stream-sink-counter-old
           description: Counter Sink Starter
           groupId: org.springframework.cloud.stream.app
           artifactId: spring-cloud-starter-stream-sink-counter
@@ -1133,6 +1254,22 @@ initializr:
           scope: compile
           starter: true
           bom: aws-s3-bom
+        - name: DataFlow Task Launcher Sink Starter
+          id: spring-cloud-starter-stream-sink-task-launcher-dataflow
+          description: DataFlow Task Launcher Sink Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-sink-task-launcher-dataflow
+          scope: compile
+          starter: true
+          bom: tasklauncher-dataflow-bom
+        - name: Task Launch Request Transformer
+          id: spring-cloud-starter-stream-processor-tasklaunchrequest-transform
+          description: Task Launch Request Transformer Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-tasklaunchrequest-transform
+          scope: compile
+          starter: true
+          bom: tasklauncher-dataflow-bom
         - name: Task Launcher Local
           id: spring-cloud-starter-stream-sink-tasklauncher-local
           description: Task Launcher Local Sink Starter
@@ -1189,6 +1326,14 @@ initializr:
           scope: compile
           starter: true
           bom: mqtt-bom
+        - name: Spring Cloud Stream PMML Processor
+          id: spring-cloud-starter-stream-processor-pmml
+          description: Spring Cloud Stream PMML Processor Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-pmml
+          scope: compile
+          starter: true
+          bom: pmml-bom
         - name: Tensorflow Processor
           id: spring-cloud-starter-stream-processor-tensorflow
           description: Tensorflow Processor Starter
@@ -1197,11 +1342,27 @@ initializr:
           scope: compile
           starter: true
           bom: tensorflow-bom
-        - name: Twitter Sentiment Processor
+        - name: Twitter Sentiment Processor (Tensorflow)
           id: spring-cloud-starter-stream-processor-twitter-sentiment
           description: Twitter Sentiment Processor Starter
           groupId: org.springframework.cloud.stream.app
           artifactId: spring-cloud-starter-stream-processor-twitter-sentiment
+          scope: compile
+          starter: true
+          bom: tensorflow-bom
+        - name: Image Recognition Processor (Tensorflow)
+          id: spring-cloud-starter-stream-processor-image-recognition
+          description: Spring Cloud Stream Processor Starter for Tensorflow image recognition
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-image-recognition
+          scope: compile
+          starter: true
+          bom: tensorflow-bom
+        - name: Object Detection Processor (Tensorflow)
+          id: spring-cloud-starter-stream-processor-object-detection
+          description: Spring Cloud Stream Processor for Tensorflow object-detection
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-object-detection
           scope: compile
           starter: true
           bom: tensorflow-bom
@@ -1221,6 +1382,14 @@ initializr:
           scope: compile
           starter: true
           bom: python-bom
+        - name: Spring Cloud Stream gRPC Processor
+          id: spring-cloud-starter-stream-processor-grpc
+          description: Spring Cloud Stream gRPC Processor Starter
+          groupId: org.springframework.cloud.stream.app
+          artifactId: spring-cloud-starter-stream-processor-grpc
+          scope: compile
+          starter: true
+          bom: grpc-bom
     - name: Spring Cloud Stream Binder Type
       content:
         - name: Kafka binder starter
