@@ -15,16 +15,21 @@
  */
 package io.spring.initializr.scs;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.spring.initializr.generator.ProjectGenerator;
 import io.spring.initializr.generator.ProjectRequest;
 import io.spring.initializr.generator.ProjectRequestPostProcessor;
 import io.spring.initializr.metadata.Dependency;
 import io.spring.initializr.metadata.InitializrMetadata;
+import io.spring.initializr.metadata.InitializrMetadataBuilder;
+import io.spring.initializr.metadata.InitializrMetadataProvider;
+import io.spring.initializr.metadata.InitializrProperties;
 import io.spring.initializr.scs.generator.ScsProjectGenerator;
 import io.spring.initializr.util.Version;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -44,6 +49,17 @@ public class InitializrScsApplication {
 	@Bean
 	public ProjectGenerator projectGenerator() {
 		return new ScsProjectGenerator();
+	}
+
+	@Bean
+	public InitializrMetadataProvider initializrMetadataProvider(
+			InitializrProperties properties,
+			ObjectMapper objectMapper,
+			RestTemplateBuilder restTemplateBuilder) {
+		InitializrMetadata metadata = InitializrMetadataBuilder
+				.fromInitializrProperties(properties).build();
+		return new CustomInitializrMetadataProvider(metadata,
+				objectMapper, restTemplateBuilder.build());
 	}
 
 	@Bean
