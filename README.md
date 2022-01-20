@@ -1,3 +1,5 @@
+# initializr is no longer actively maintained by VMware, Inc.
+
 # Initializr SCS
 
 [![Build Status](https://travis-ci.org/spring-cloud-stream-app-starters/initializr.png?branch=master)](https://travis-ci.org/spring-cloud-stream-app-starters/initializr)
